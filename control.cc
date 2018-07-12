@@ -870,14 +870,14 @@ int relatedclass::parse(ifstream &inf, ostream &outf, ostream &outd)
 
 	outf << "displayFileName {" << endl;
 	for (int i=0; i<rel_ctr; i++) {
-		outf << "  " << i << " " << rellist[i].name << endl;  
+		outf << "  " << i << " \"" << rellist[i].name << "\"" << endl;  
 		//outd << "Rel Disp: " << rellist[i].name << endl;  
 	}
 	outf << "}" << endl;				
 
 	outf << "menuLabel {" << endl;
 	for (int i=0; i<rel_ctr; i++) 
-		outf << "  " << i << " " << rellist[i].label << endl;  
+		outf << "  " << i << " \"" << rellist[i].label << "\"" << endl;  
 	outf << "}" << endl;				
 
 	// Write 'symbol open curly brace' only if there are args
